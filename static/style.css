@@ -3,6 +3,10 @@ html {
     font-family: 'Georgia', serif;
 }
 
+#about {
+    margin: 0 10% 0 10%;
+}
+
 #social {
     width: 20%;
 } 
