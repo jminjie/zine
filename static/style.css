@@ -7,10 +7,23 @@ html {
     width: 20%;
 } 
 
+p, a {
+    color: grey;
+}
+
 img {
     width: 111%;
     margin-left: -5.5%;
     margin-right: -5.5%;
+}
+
+#homelink {
+    text-decoration: none;
+}
+
+#footer {
+    text-align: center;
+    margin-bottom: 5%;
 }
 
 #poem {
