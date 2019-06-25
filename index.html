@@ -9,15 +9,14 @@
     <body style="margin-top: 5%; margin-left: auto; margin-right: auto; display:block; width:100%; max-width: 700px; text-align: center">
         <h1>thumb poems</h1>
         <p>poems penned on phones</p>
-        <div>
             <a href="https://www.instagram.com/thumbpoems"><img id="social" src="static/instagram.png" alt="Thumb poems instagram"></a>
-        </div>
         <div id="poem">
-            <img src="poems/0.jpg" alt="Asking for forgiveness / Do salt trucks get iced in / Are therapists sad / Less than the rest of us // At least it's easy to reconcile / Not about you about me / Some stupid reminder how / We don't die alone">
+            <img id="testpoem" src="">
+            <script src="selector.js"></script>
         </div>
         <div id="arrows">
-            <div id="left-arrow"><a href="/"><img src="static/back.png" alt="Back"></a></div>
-            <div id="right-arrow"><a href="/"><img src="static/forward.png" alt="Forward"></a></div>
+            <div id="left-arrow"><img src="static/back.png" alt="Back" onclick="previous()"></div>
+            <div id="right-arrow"><img src="static/forward.png" alt="Forward" onclick="next()"></div>
         </div>
         <div id="footer">
             <p><a href="/about.html">About</a></p>
