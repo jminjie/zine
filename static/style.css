@@ -39,14 +39,14 @@ img {
 }
 
 #left-arrow {
-    width: 5%;
-    margin-right: 10%;
+    width: 15%;
+    margin-right: 20%;
     display: inline-block;
 }
 
 #right-arrow {
-    width: 5%;
-    margin-left: 10%;
+    width: 15%;
+    margin-left: 20%;
     display: inline-block;
 }
 
@@ -60,5 +60,17 @@ img {
         margin-left: 0%;
         margin-right: 0%;
         position: static;
+    }
+
+    #left-arrow {
+        width: 5%;
+        margin-right: 10%;
+        display: inline-block;
+    }
+
+    #right-arrow {
+        width: 5%;
+        margin-left: 10%;
+        display: inline-block;
     }
 }
