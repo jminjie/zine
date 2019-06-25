@@ -1,0 +1,47 @@
+html {
+    font-size: 120%;
+    font-family: 'Georgia', serif;
+}
+
+#social {
+    width: 20%;
+} 
+
+img {
+    width: 111%;
+    margin-left: -5.5%;
+    margin-right: -5.5%;
+}
+
+#poem {
+    margin: 5% 5% 5% 5%;
+}
+
+#arrows {
+    margin: 5% 5% 5% 5%;
+}
+
+#left-arrow {
+    width: 5%;
+    margin-right: 10%;
+    display: inline-block;
+}
+
+#right-arrow {
+    width: 5%;
+    margin-left: 10%;
+    display: inline-block;
+}
+
+@media(min-width:700px){
+    #social {
+        width: 7%;
+    } 
+
+    img, #banner, figure {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        position: static;
+    }
+}
