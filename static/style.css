@@ -5,6 +5,11 @@ html {
 
 #about {
     margin: 0 10% 0 10%;
+    color: grey;
+}
+
+#submitting {
+    text-align: left;
 }
 
 #social {
