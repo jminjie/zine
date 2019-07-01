@@ -6,4 +6,4 @@ The `static` directory holds static assets (images and css).
 The `poems` directory holds the actual poem image files. The '<' and '>'
 buttons on the main page should link to the previous and next posts.
 
-This can be edited from mobile using FastHub Pro. Files can be renamed with Root Browser, and should be named <number>.jpg, and can be uploaded using Github's desktop webpage.
+This can be edited from mobile using FastHub Pro. Files can be renamed with Root Browser, and can be uploaded using Github's desktop webpage.
