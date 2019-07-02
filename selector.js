@@ -1,4 +1,4 @@
-const NUM_POEMS = 4; // one more than max poem value
+const NUM_POEMS = 5; // one more than max poem value
 window.onload = setPoem();
 
 function getPoemNumber() {
