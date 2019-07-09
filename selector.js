@@ -25,8 +25,8 @@ function next() {
 
 function setPoem() {
     poemNumber = getPoemNumber();
-    document.getElementById('testpoem').src = 'poems/' + poemNumber;
-    document.getElementById('testpoem').alt = getTranscription(poemNumber);
+    document.getElementById('poem_image').src = 'poems/' + poemNumber;
+    document.getElementById('poem_image').alt = getTranscription(poemNumber);
 }
 
 function getTranscription(last) {
