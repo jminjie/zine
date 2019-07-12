@@ -12,15 +12,15 @@ function getPoemNumber() {
 
 function previous() {
     current = getPoemNumber();
-    // trick for making negative modulo cycle
-    previous = ((current - 1) % NUM_POEMS + NUM_POEMS) % NUM_POEMS;
-    window.location.replace('?' + previous);
+    next = (current + 1) % NUM_POEMS;
+    window.location.replace('?' + next);
 }
 
 function next() {
     current = getPoemNumber();
-    next = (current + 1) % NUM_POEMS;
-    window.location.replace('?' + next);
+    // trick for making negative modulo cycle
+    previous = ((current - 1) % NUM_POEMS + NUM_POEMS) % NUM_POEMS;
+    window.location.replace('?' + previous);
 }
 
 function setPoem() {
