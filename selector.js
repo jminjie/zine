@@ -26,10 +26,19 @@ function next() {
 function setPoem() {
     poemNumber = getPoemNumber();
     document.getElementById('poem_image').src = 'poems/' + poemNumber;
-    document.getElementById('poem_image').alt = getTranscription(poemNumber);
+    fetchAndSetTranscription(poemNumber);
 }
 
-function getTranscription(last) {
-    // TODO
-    return "image of poem";
+function fetchAndSetTranscription(poemNumber) {
+    fetch('poems/transcriptions.json')
+        .then(response => response.json())
+        .then(function (response) {
+            if (response[poemNumber]) {
+                transcript = response[poemNumber];
+            } else {
+                transcript = "No transcript available.";
+            }
+            document.getElementById('poem_image').alt = transcript;
+            document.getElementById('poem_image').title = transcript;
+        });
 }
