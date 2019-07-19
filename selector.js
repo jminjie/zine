@@ -30,13 +30,13 @@ function setPoem() {
 }
 
 function fetchAndSetTranscription(poemNumber) {
-    fetch('poems/transcriptions.json')
+    fetch('transcriptions/' + poemNumber + '.json')
         .then(response => response.json())
         .then(function (response) {
-            if (response[poemNumber]) {
-                transcript = response[poemNumber];
+            if (response['transcription']) {
+                transcript = response['transcription'];
             } else {
-                transcript = "No transcript available.";
+                transcript = "No transcription available.";
             }
             document.getElementById('poem_image').alt = transcript;
             document.getElementById('poem_image').title = transcript;
