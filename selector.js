@@ -1,6 +1,21 @@
 const NUM_POEMS = 15; // one more than max poem value
 window.onload = setPoem();
 
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+    e = e || window.event;
+    if (e.keyCode == '37') {
+        // left arrow
+        previous();
+    }
+    else if (e.keyCode == '39') {
+        // right arrow
+        next();
+    }
+}
+
+
 function getPoemNumber() {
     url = window.location.href.split('?')
     if (url.length > 1) {
