@@ -57,3 +57,5 @@ function fetchAndSetTranscription(poemNumber) {
             document.getElementById('poem_image').title = transcript;
         });
 }
+
+document.getElementById('poem_image').onclick = next;
