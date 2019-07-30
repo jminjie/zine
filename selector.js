@@ -19,10 +19,12 @@ function checkKey(e) {
 function getPoemNumber() {
     url = window.location.href.split('?')
     if (url.length > 1) {
-        return parseInt(url.pop());
-    } else {
-        return NUM_POEMS-1;
+        number = parseInt(url.pop());
+        if (!isNaN(number)) {
+            return number;
+        }
     }
+    return NUM_POEMS-1;
 }
 
 function previous() {
