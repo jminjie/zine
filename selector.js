@@ -1,4 +1,4 @@
-const NUM_POEMS = 25; // one more than max poem value
+const NUM_POEMS = 26; // one more than max poem value
 window.onload = setPoem();
 
 document.onkeydown = checkKey;
