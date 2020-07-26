@@ -6,3 +6,6 @@ The `static` directory holds static assets (images and css).
 The `pages` directory holds the actual page image files.
 
 The `transcriptions` directory holds my manual transcriptions of each page.
+
+## Demo
+See the demo [here](https://jminjie.github.io/zine).
