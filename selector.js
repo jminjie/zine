@@ -29,7 +29,6 @@ function getPageNumber() {
 
 function previous() {
     current = getPageNumber();
-    // trick for making negative modulo cycle
     previous = current - 1;
     if (previous >= 0) {
         window.location.replace('?' + previous);
@@ -46,7 +45,10 @@ function next() {
 
 function setPage() {
     poemNumber = getPageNumber();
-    document.getElementById('page_image').src = 'pages/' + poemNumber;
+    var img = new Image;
+    img.src = 'pages/' + poemNumber;
+    img.id = 'page_img';
+    document.getElementById('page').appendChild(img);
     fetchAndSetTranscription(poemNumber);
 }
 
@@ -59,7 +61,7 @@ function fetchAndSetTranscription(poemNumber) {
             } else {
                 transcript = "No transcription available.";
             }
-            //document.getElementById('page_image').alt = transcript;
+            document.getElementById('page_image').alt = transcript;
             document.getElementById('page_image').title = transcript;
         });
 }

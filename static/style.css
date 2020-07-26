@@ -12,16 +12,13 @@ html {
     text-align: left;
 }
 
-#social {
-    width: 20%;
-} 
-
 p, a {
     color: dimgrey;
 }
 
-img {
-    width: 100%;
+#page_img {
+    height: 80%;
+    object-fit: contain;
     margin-left: -5%;
     margin-right: -5%;
 }
@@ -32,7 +29,10 @@ img {
 
 #footer {
     text-align: center;
-    margin-bottom: 5%;
+    position:fixed;
+    bottom: 3%;
+    left: 0;
+    right: 0;
 }
 
 #page {
@@ -40,7 +40,10 @@ img {
 }
 
 #arrows {
-    margin: 0% 5% 0% 5%;
+    position:fixed;
+    bottom: 10%;
+    width: 60%;
+    left: 20%;
 }
 
 #left-arrow {
@@ -56,10 +59,6 @@ img {
 }
 
 @media(min-width:700px){
-    #social {
-        width: 7%;
-    } 
-
     img, #banner, figure {
         width: 100%;
         margin-left: 0%;
