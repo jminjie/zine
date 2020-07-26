@@ -16,7 +16,7 @@ p, a {
     color: dimgrey;
 }
 
-#page_img {
+#page_image {
     height: 80%;
     object-fit: contain;
     margin-left: -5%;

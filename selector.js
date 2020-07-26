@@ -47,8 +47,9 @@ function setPage() {
     poemNumber = getPageNumber();
     var img = new Image;
     img.src = 'pages/' + poemNumber;
-    img.id = 'page_img';
+    img.id = 'page_image';
     document.getElementById('page').appendChild(img);
+    document.getElementById('page_num').textContent = poemNumber + "/" + (NUM_POEMS-1);
     fetchAndSetTranscription(poemNumber);
 }
 
