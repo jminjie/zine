@@ -33,26 +33,29 @@ p, a {
 }
 
 img {
-    width: 40%;
+    width: 10%;
 }
 
 #arrows {
     width: 100%;
+    display: inline-block;
 }
 
 #left-arrow {
+    width: 70%;
     display: inline-block;
 }
 
 #right-arrow {
+    width: 70%;
     display: inline-block;
 }
 
 #page_num {
     text-align:center;
     font-size: 150%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: -30%;
+    margin-right: -30%;
 }
 
 @media(min-width:700px){
@@ -70,24 +73,23 @@ img {
     #arrows {
         position:fixed;
         bottom: 10%;
-        width: 60%;
-        left: 20%;
+        left: 0%;
     }
 
     #left-arrow {
-        width: 5%;
-        margin-right: 10%;
-        display: inline-block;
+        max-width: 3%;
+        margin-right: 5%;
     }
 
     #right-arrow {
-        width: 5%;
-        margin-left: 10%;
-        display: inline-block;
+        max-width: 3%;
+        margin-left: 5%;
     }
 
     #page_num {
         font-size: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     #footer {
