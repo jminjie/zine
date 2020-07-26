@@ -35,13 +35,13 @@ img {
     margin-bottom: 5%;
 }
 
-#poem {
+#page {
     margin: 5% 5% 5% 5%;
     box-shadow: 0 0 20px 0 lightgrey;
 }
 
 #arrows {
-    margin: 5% 5% 5% 5%;
+    margin: 0% 5% 0% 5%;
 }
 
 #left-arrow {

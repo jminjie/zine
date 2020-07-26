@@ -1,5 +1,5 @@
-const NUM_POEMS = 27; // one more than max poem value
-window.onload = setPoem();
+const NUM_POEMS = 13; // one more than max poem value
+window.onload = setPage();
 
 document.onkeydown = checkKey;
 
@@ -16,7 +16,7 @@ function checkKey(e) {
 }
 
 
-function getPoemNumber() {
+function getPageNumber() {
     url = window.location.href.split('?')
     if (url.length > 1) {
         number = parseInt(url.pop());
@@ -24,25 +24,29 @@ function getPoemNumber() {
             return number;
         }
     }
-    return NUM_POEMS-1;
+    return 0;
 }
 
 function previous() {
-    current = getPoemNumber();
-    next = (current + 1) % NUM_POEMS;
-    window.location.replace('?' + next);
+    current = getPageNumber();
+    // trick for making negative modulo cycle
+    previous = current - 1;
+    if (previous >= 0) {
+        window.location.replace('?' + previous);
+    }
 }
 
 function next() {
-    current = getPoemNumber();
-    // trick for making negative modulo cycle
-    previous = ((current - 1) % NUM_POEMS + NUM_POEMS) % NUM_POEMS;
-    window.location.replace('?' + previous);
+    current = getPageNumber();
+    next = current + 1;
+    if (next < NUM_POEMS) {
+        window.location.replace('?' + next);
+    }
 }
 
-function setPoem() {
-    poemNumber = getPoemNumber();
-    document.getElementById('poem_image').src = 'poems/' + poemNumber;
+function setPage() {
+    poemNumber = getPageNumber();
+    document.getElementById('page_image').src = 'pages/' + poemNumber;
     fetchAndSetTranscription(poemNumber);
 }
 
@@ -55,9 +59,9 @@ function fetchAndSetTranscription(poemNumber) {
             } else {
                 transcript = "No transcription available.";
             }
-            document.getElementById('poem_image').alt = transcript;
-            document.getElementById('poem_image').title = transcript;
+            //document.getElementById('page_image').alt = transcript;
+            document.getElementById('page_image').title = transcript;
         });
 }
 
-document.getElementById('poem_image').onclick = next;
+document.getElementById('page_image').onclick = next;
