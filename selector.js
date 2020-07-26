@@ -1,4 +1,4 @@
-const NUM_POEMS = 13; // one more than max poem value
+const NUM_PAGES = 13; // one more than max page value
 window.onload = setPage();
 
 document.onkeydown = checkKey;
@@ -38,23 +38,23 @@ function previous() {
 function next() {
     current = getPageNumber();
     next = current + 1;
-    if (next < NUM_POEMS) {
+    if (next < NUM_PAGES) {
         window.location.replace('?' + next);
     }
 }
 
 function setPage() {
-    poemNumber = getPageNumber();
+    pageNumber = getPageNumber();
     var img = new Image;
-    img.src = 'pages/' + poemNumber;
+    img.src = 'pages/' + pageNumber;
     img.id = 'page_image';
     document.getElementById('page').appendChild(img);
-    document.getElementById('page_num').textContent = poemNumber + "/" + (NUM_POEMS-1);
-    fetchAndSetTranscription(poemNumber);
+    document.getElementById('page_num').textContent = pageNumber + "/" + (NUM_PAGES-1);
+    fetchAndSetTranscription(pageNumber);
 }
 
-function fetchAndSetTranscription(poemNumber) {
-    fetch('transcriptions/' + poemNumber + '.json')
+function fetchAndSetTranscription(pageNumber) {
+    fetch('transcriptions/' + pageNumber + '.json')
         .then(response => response.json())
         .then(function (response) {
             if (response['transcription']) {
