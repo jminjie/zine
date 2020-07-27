@@ -42,20 +42,17 @@ img {
 }
 
 #left-arrow {
-    width: 70%;
-    display: inline-block;
+    width: 100%;
 }
 
 #right-arrow {
-    width: 70%;
-    display: inline-block;
+    width: 100%;
 }
 
 #page_num {
     text-align:center;
     font-size: 150%;
-    margin-left: -30%;
-    margin-right: -30%;
+    line-height: 210%;
 }
 
 @media(min-width:700px){
@@ -79,11 +76,13 @@ img {
     #left-arrow {
         max-width: 3%;
         margin-right: 5%;
+        display: inline-block;
     }
 
     #right-arrow {
         max-width: 3%;
         margin-left: 5%;
+        display: inline-block;
     }
 
     #page_num {
