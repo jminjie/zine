@@ -63,7 +63,6 @@ function fetchAndSetTranscription(pageNumber) {
                 transcript = "No transcription available.";
             }
             document.getElementById('page_image').alt = transcript;
-            document.getElementById('page_image').title = transcript;
         });
 }
 
